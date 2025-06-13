@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سينما فاشن - مشاهدة المسلسل</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="series.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+    <!-- شريط التنقل العلوي -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">سينما<span>فاشن</span></a>
+            <div class="search-box">
+                <input type="text" placeholder="ابحث عن أفلام أو مسلسلات..." id="search-input">
+                <button id="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="nav-links">
+                <a href="index.html"><i class="fas fa-home"></i> الرئيسية</a>
+                <a href="movies.html"><i class="fas fa-film"></i> الأفلام</a>
+                <a href="series.html" class="active"><i class="fas fa-tv"></i> المسلسلات</a>
+                <a href="account.html"><i class="fas fa-user"></i> حسابي</a>
+            </div>
+            <button class="menu-toggle" id="menu-toggle"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <!-- محتوى صفحة المسلسل -->
+    <main class="series-container">
+        <div class="container">
+            <!-- قسم معلومات المسلسل -->
+            <section class="series-header">
+                <div class="series-poster">
+                    <img src="" alt="صورة المسلسل" class="lazy">
+                </div>
+                <div class="series-info">
+                    <h1>جاري التحميل...</h1>
+                    <div class="series-meta">
+                        <span><i class="fas fa-star"></i> --/10</span>
+                        <span><i class="fas fa-calendar-alt"></i> ----</span>
+                        <span><i class="fas fa-tag"></i> جاري التحميل...</span>
+                        <span><i class="fas fa-flag"></i> --</span>
+                    </div>
+                    <p class="series-description">جاري تحميل وصف المسلسل...</p>
+                    <div class="series-actions">
+                        <a href="#" class="btn btn-primary watch-btn">
+                            <i class="fas fa-play"></i> مشاهدة الان
+                        </a>
+                        <a href="#" class="btn btn-outline download-btn">
+                            <i class="fas fa-download"></i> تحميل الان
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- قسم حلقات المسلسل -->
+            <section class="episodes-section">
+                <h2><i class="fas fa-list"></i> حلقات المسلسل</h2>
+                
+                <!-- سيتم تعبئة المواسم والحلقات بواسطة JavaScript -->
+                <div id="episodes-container"></div>
+            </section>
+
+            <!-- مسلسلات مشابهة -->
+            <section class="related-series">
+                <h2><i class="fas fa-random"></i> مسلسلات مشابهة</h2>
+                <div class="series-grid" id="related-series-container">
+                    <!-- سيتم تعبئتها بواسطة JavaScript -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- تذييل الصفحة -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- نفس تذييل الصفحة من index.html -->
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="series.js"></script>
+</body>
+</html>

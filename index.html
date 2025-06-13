@@ -1,69 +1,284 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>موقع الأنمي</title>
+    <title>سينما فاشن - أفلام ومسلسلات بجودة عالية</title>
+    <meta name="description" content="أكبر مكتبة أفلام ومسلسلات عربية وأجنبية بجودة عالية - شاهد أحدث الإصدارات والمحتوى الحصري">
+    <meta name="keywords" content="أفلام, مسلسلات, سينما, مشاهدة أفلام, أفلام أونلاين, مسلسلات أجنبية, أفلام عربية">
+    <meta property="og:title" content="سينما فاشن - أفلام ومسلسلات بجودة عالية">
+    <meta property="og:description" content="شاهد أحدث الأفلام والمسلسلات العربية والأجنبية">
+    <meta property="og:image" content="https://example.com/logo.png">
+    <meta property="og:url" content="https://example.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
-	<link rel="stylesheet" href="styles.css">
-
+    <link rel="icon" type="image/png" href="favicon.png">
+    <!-- Preload important resources -->
+    <link rel="preload" href="script.js" as="script">
+    <link rel="preload" href="styles.css" as="style">
 </head>
 <body>
+    <!-- شريط التنقل العلوي -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">سينما<span>فاشن</span></a>
+            <div class="search-box">
+                <input type="text" placeholder="ابحث عن أفلام أو مسلسلات..." id="search-input">
+                <button id="search-btn"><i class="fas fa-search"></i></button>
+                <div class="search-results" id="search-results"></div>
+            </div>
+            <div class="nav-links">
+                <a href="#" class="active"><i class="fas fa-home"></i> الرئيسية</a>
+                <div class="dropdown">
+                    <a href="#"><i class="fas fa-film"></i> الأفلام <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="#"><i class="fas fa-globe-americas"></i> أجنبية</a>
+                        <a href="#"><i class="fas fa-mosque"></i> عربية</a>
+                        <a href="#"><i class="fas fa-flag-asia"></i> آسيوية</a>
+                        <a href="#"><i class="fas fa-moon"></i> تركية</a>
+                        <a href="#"><i class="fas fa-star"></i> الأعلى تقييماً</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="#"><i class="fas fa-tv"></i> المسلسلات <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="#"><i class="fas fa-globe-americas"></i> أجنبية</a>
+                        <a href="#"><i class="fas fa-mosque"></i> عربية</a>
+                        <a href="#"><i class="fas fa-flag-asia"></i> آسيوية</a>
+                        <a href="#"><i class="fas fa-moon"></i> تركية</a>
+                        <a href="#"><i class="fas fa-star"></i> الأعلى تقييماً</a>
+                    </div>
+                </div>
+                <a href="account.html"><i class="fas fa-user"></i> حسابي</a>
+                <a href="login.html"><i class="fas fa-sign-in-alt"></i> تسجيل الدخول</a>
+            </div>
+            <button class="menu-toggle" id="menu-toggle"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
 
-    <!-- Navbar -->
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#">الرئيسية</a></li>
-                <li><a href="#">الأنميات</a></li>
-                <li><a href="#">الأخبار</a></li>
-                <li><a href="#">اتصل بنا</a></li>
-				<li><a href="#">مواعيد الانمي</a></li>
-
-            </ul>
-        </nav>
-    </header>
-
-    <!-- Hero Section -->
+    <!-- قسم البانر الرئيسي -->
     <section class="hero">
-        <div class="hero-content">
-            <h1>sanime
-            <p>شاهد أنمياتك المفضلة بأفضل تجربة!</p>
-            
+        <div class="hero-slider" id="hero-slider">
+            <!-- سيتم تعبئته بواسطة JavaScript -->
         </div>
     </section>
 
-    <!-- Featured Anime Section -->
-    <section class="featured">
-        <h2>الأنميات المميزة</h2>
-        <div class="anime-cards">
-            <div class="anime-card">
-                <img src="https://web2.topcinema.cam/wp-content/uploads/2023/12/one-piece-egghead-visual.jpg" alt="أنمي 1">
-                <h3>One Piece
-</h3>
-                <p>العظمة , المجد , الذهب , مزايا اشتملت عليها حياة ملك القراصنة غولد روجر الذي حكم عليه بالإعدام لأسباب مجهولة, و ارتأى أن يشي بسر كنزه المعروف بـ ” ون بيس” و المخبأ في مكان ما على الخط الكبير قبل أن ينفذ فيه حكم الإعدام. و بعد اثنين و عشرين سنة من هذه الحادثة تبدأ أحداث قصتنا , و يظهر بطلنا القرصان مونكي دي لوفي الحالم بالعثور على الكنزو الطامع بلقب ملك القراصنة , و من أجل ذلك , يقوم بتناول فاكهة الشيطان للحصول على القوة اللازمة و لتيسير و تذييل العقبات التي من شأنها إعاقة المهمة. و قبل البدء بأي شيء , عليه أولاً أن يجد الطاقم المناسب ليبدءون رحلة البحث عن الكنز الأسطوري.
+    <!-- قسم المحتوى -->
+    <main class="main-content">
+        <div class="container">
+            <!-- قسم الأفلام المميزة -->
+            <section class="section">
+                <div class="section-header">
+                    <h2><i class="fas fa-fire"></i> الأفلام الأكثر مشاهدة</h2>
+                    <a href="movies.html" class="view-all">عرض الكل <i class="fas fa-chevron-left"></i></a>
+                </div>
+                <div class="movies-grid" id="trending-movies">
+                    <!-- سيتم تعبئتها بواسطة JavaScript -->
+                </div>
+            </section>
 
-</p>
-            </div>
-            <div class="anime-card">
-                <img src="https://web2.topcinema.cam/wp-content/uploads/2025/04/MV5BYjcxOWYyZDEtOTRlMy00MmQzLWEzMDgtYjgxYTliMWM5MjgxXkEyXkFqcGc@.jpg_V1_SX700.jpg" alt="أنمي 2">
-                <h3>Enen no Shouboutai
-</h3>
-                <p>في طوكيو، عام 198 من العصر الشمسي، تُواجه فرق الإطفاء الخاصة ظاهرة غريبة تُعرف باسم “الاشتعال البشري التلقائي”. يتحول البشر خلالها إلى أفران حية تُعرف باسم “الملتهبين”. على الرغم من أن هذه الحالة تُعد من الجيل الأول للاشتعال البشري التلقائي، إلا أن الجيل التالي يتمتع بقدرة فريدة على التحكم بالنار مع الحفاظ على شكله البشري. ينضم شينرا كوساكابي، الشاب الملقب بـ “بصمات الشيطان” لقدرته على إشعال قدميه بإرادته، إلى سرية الإطفاء الخاصة رقم 8. تتكون هذه السرية من مستخدمي اللهب الآخرين، حيث يعملون معًا على إخماد أي ملتهب يواجهونه. مع ظهور فصيل غامض يُجري تجارب لخلق الملتهبين، يبدأ شينرا في رحلة لكشف الحقيقة وراء حريقٍ مروعٍ تسبب في وفاة عائلته قبل اثني عشر عامًا.
+            <!-- قسم المسلسلات المميزة -->
+            <section class="section">
+                <div class="section-header">
+                    <h2><i class="fas fa-crown"></i> المسلسلات الحصرية</h2>
+                    <a href="series.html" class="view-all">عرض الكل <i class="fas fa-chevron-left"></i></a>
+                </div>
 
-</p>
-            </div>
-            <!-- أضف المزيد من الأنميات هنا -->
+                <div class="movies-grid" id="exclusive-series">
+                    <!-- سيتم تعبئتها بواسطة JavaScript -->
+                </div>
+            </section>
+
+            <!-- قسم حسب التصنيف -->
+            <section class="section">
+                <div class="section-header">
+                    <h2><i class="fas fa-tags"></i> تصفح حسب التصنيف</h2>
+                </div>
+                <div class="categories-grid" id="categories-grid">
+                    <!-- سيتم تعبئتها بواسطة JavaScript -->
+                </div>
+            </section>
+
+            <!-- قسم التريلرات -->
+            <section class="section" id="trailers-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-video"></i> أحدث التريلرات</h2>
+                    <a href="trailers.html" class="view-all">عرض الكل <i class="fas fa-chevron-left"></i></a>
+                </div>
+                <div class="trailer-container">
+                    <div class="trailer-placeholder skeleton"></div>
+                </div>
+            </section>
+
+            <!-- قسم التوصيات الشخصية -->
+            <section class="section" id="recommendations-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-magic"></i> نوصي لك</h2>
+                </div>
+                <div class="movies-grid" id="recommendations-grid">
+                    <!-- سيتم تعبئتها بواسطة JavaScript -->
+                </div>
+            </section>
         </div>
-    </section>
+    </main>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 موقع الأنمي. جميع الحقوق محفوظة.</p>
+    <!-- تذييل الصفحة -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>عن سينما فاشن</h3>
+                    <p>أكبر مكتبة أفلام ومسلسلات عربية وأجنبية بجودة عالية. نقدم أحدث الإصدارات وأفضل المحتوى الحصري.</p>
+                    <div class="app-download">
+                        <p>حمل التطبيق الآن</p>
+                        <div class="download-buttons">
+                            <a href="#" class="app-btn"><img src="assets/google-play.png" alt="Google Play"></a>
+                            <a href="#" class="app-btn"><img src="assets/app-store.png" alt="App Store"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>روابط سريعة</h3>
+                    <ul>
+                        <li><a href="#">الأفلام الجديدة</a></li>
+                        <li><a href="#">المسلسلات الحصرية</a></li>
+                        <li><a href="#">قائمة المشاهدة</a></li>
+                        <li><a href="account.html">حسابي</a></li>
+                        <li><a href="pricing.html">الباقات والاشتراكات</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>اتصل بنا</h3>
+                    <ul class="social-links">
+                        <li><a href="#"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                        <li><a href="#"><i class="fab fa-youtube"></i> YouTube</a></li>
+                        <li><a href="#"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>اشترك في النشرة البريدية</h3>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="بريدك الإلكتروني" required>
+                        <button type="submit" class="btn btn-primary">اشتراك</button>
+                    </form>
+                    <p>احصل على آخر التحديثات والعروض الحصرية</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 سينما فاشن. جميع الحقوق محفوظة.</p>
+                <div class="footer-links">
+                    <a href="#">شروط الاستخدام</a>
+                    <a href="#">سياسة الخصوصية</a>
+                    <a href="#">سياسة الاسترجاع</a>
+                    <a href="#">الإبلاغ عن مشكلة</a>
+                </div>
+            </div>
+        </div>
     </footer>
 
-    <script src="script.js"></script>
-</body>
-<script src="script.js"></script>
+    <!-- مشغل الفيديو -->
+    <div class="video-player" id="video-player">
+        <div class="player-container">
+            <div class="player-header">
+                <h3 id="player-title"></h3>
+                <button class="close-player" id="close-player"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="video-container">
+                <video id="main-video" controls>
+                    <source src="" type="video/mp4">
+                    متصفحك لا يدعم تشغيل الفيديو.
+                </video>
+            </div>
+            <div class="player-controls">
+                <button class="btn btn-primary" id="add-to-watchlist"><i class="fas fa-plus"></i> قائمة المشاهدة</button>
+                <button class="btn btn-outline" id="download-btn"><i class="fas fa-download"></i> تحميل</button>
+                <div class="quality-selector">
+                    <select id="quality-select">
+                        <option value="480">480p</option>
+                        <option value="720">720p</option>
+                        <option value="1080" selected>1080p</option>
+                        <option value="4k">4K</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <!-- نافذة تسجيل الدخول -->
+    <div class="auth-modal" id="login-modal">
+        <div class="modal-content">
+            <button class="close-modal" id="close-login"><i class="fas fa-times"></i></button>
+            <h2>تسجيل الدخول</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <input type="email" placeholder="البريد الإلكتروني" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" placeholder="كلمة المرور" required>
+                </div>
+                <div class="form-options">
+                    <label>
+                        <input type="checkbox"> تذكرني
+                    </label>
+                    <a href="forgot-password.html">نسيت كلمة المرور؟</a>
+                </div>
+                <button type="submit" class="btn btn-primary">تسجيل الدخول</button>
+                <div class="social-login">
+                    <p>أو سجل الدخول باستخدام</p>
+                    <div class="social-buttons">
+                        <button type="button" class="btn btn-facebook"><i class="fab fa-facebook-f"></i> Facebook</button>
+                        <button type="button" class="btn btn-google"><i class="fab fa-google"></i> Google</button>
+                    </div>
+                </div>
+                <p class="switch-auth">ليس لديك حساب؟ <a href="#" id="show-register">إنشاء حساب</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- نافذة إنشاء حساب -->
+    <div class="auth-modal" id="register-modal">
+        <div class="modal-content">
+            <button class="close-modal" id="close-register"><i class="fas fa-times"></i></button>
+            <h2>إنشاء حساب جديد</h2>
+            <form id="register-form">
+                <div class="form-group">
+                    <input type="text" placeholder="الاسم الكامل" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="البريد الإلكتروني" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" placeholder="كلمة المرور" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" placeholder="تأكيد كلمة المرور" required>
+                </div>
+                <div class="form-options">
+                    <label>
+                        <input type="checkbox" required> أوافق على <a href="#">شروط الاستخدام</a> و <a href="#">سياسة الخصوصية</a>
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-primary">إنشاء حساب</button>
+                <div class="social-login">
+                    <p>أو سجل باستخدام</p>
+                    <div class="social-buttons">
+                        <button type="button" class="btn btn-facebook"><i class="fab fa-facebook-f"></i> Facebook</button>
+                        <button type="button" class="btn btn-google"><i class="fab fa-google"></i> Google</button>
+                    </div>
+                </div>
+                <p class="switch-auth">لديك حساب بالفعل؟ <a href="#" id="show-login">تسجيل الدخول</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- الإشعارات -->
+    <div class="notifications-container" id="notifications-container"></div>
+
+    <script src="script.js" defer></script>
+</body>
 </html>
