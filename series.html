@@ -28,40 +28,79 @@
         </div>
     </nav>
 
-    <!-- محتوى صفحة المسلسل -->
-    <main class="series-container">
+    <!-- محتوى صفحة المسلسل - تصميم جديد -->
+    <main class="series-container custom-series-layout">
         <div class="container">
-            <!-- قسم معلومات المسلسل -->
-            <section class="series-header">
-                <div class="series-poster">
-                    <img src="" alt="صورة المسلسل" class="lazy">
-                </div>
-                <div class="series-info">
-                    <h1>جاري التحميل...</h1>
-                    <div class="series-meta">
-                        <span><i class="fas fa-star"></i> --/10</span>
-                        <span><i class="fas fa-calendar-alt"></i> ----</span>
-                        <span><i class="fas fa-tag"></i> جاري التحميل...</span>
-                        <span><i class="fas fa-flag"></i> --</span>
+            <!-- رأس المسلسل الجديد -->
+            <section class="series-header-flex">
+                <!-- البوستر -->
+                <div class="series-poster-box">
+                    <img src="" alt="صورة المسلسل" class="series-poster-img lazy">
+                    <div class="poster-badges">
+                        <button class="imdb-badge"><i class="fas fa-star"></i> <span class="imdb-rating">8.1</span> IMDb</button>
+                        <button class="watch-trailer-btn"><i class="fas fa-film"></i> مشاهدة التريلر</button>
                     </div>
-                    <p class="series-description">جاري تحميل وصف المسلسل...</p>
-                    <div class="series-actions">
-                        <a href="#" class="btn btn-primary watch-btn">
-                            <i class="fas fa-play"></i> مشاهدة الان
-                        </a>
-                        <a href="#" class="btn btn-outline download-btn">
-                            <i class="fas fa-download"></i> تحميل الان
-                        </a>
+                </div>
+                <!-- معلومات المسلسل وتفاصيله -->
+                <div class="series-details-flex">
+                    <div class="series-title-box">
+                        <h1 class="series-title">جاري التحميل...</h1>
+                        <div class="breadcrumbs">
+                            <span>الرئيسية</span> <i class="fas fa-angle-left"></i>
+                            <span>مسلسلات</span> <i class="fas fa-angle-left"></i>
+                            <span class="series-breadcrumb-title">اسم المسلسل</span>
+                        </div>
+                    </div>
+                    <div class="series-description-section">
+                        <h3><i class="fas fa-quote-right"></i> قصة المسلسل</h3>
+                        <div class="series-description">جاري تحميل وصف المسلسل...</div>
+                    </div>
+                    <div class="series-meta-section">
+                        <h3><i class="fas fa-quote-right"></i> تفاصيل المسلسل</h3>
+                        <ul class="series-meta-list">
+                            <li><span>قسم المسلسل:</span> <span class="meta-value meta-category">مسلسلات</span> <i class="fas fa-folder"></i></li>
+                            <li><span>نوع المسلسل:</span> <span class="meta-value meta-type">---</span> <i class="fas fa-folder-open"></i></li>
+                            <li><span>جودة المسلسل:</span> <span class="meta-value meta-quality">---</span> <i class="fas fa-video"></i></li>
+                            <li><span>توقيت المسلسل:</span> <span class="meta-value meta-duration">---</span> <i class="fas fa-clock"></i></li>
+                            <li><span>موعد الصدور:</span> <span class="meta-value meta-year">---</span> <i class="fas fa-calendar-alt"></i></li>
+                            <li><span>دولة المسلسل:</span> <span class="meta-value meta-country">---</span> <i class="fas fa-flag"></i></li>
+                            <li><span>المخرجين:</span> <span class="meta-value meta-directors">---</span> <i class="fas fa-user-tie"></i></li>
+                            <li><span>المؤلفين:</span> <span class="meta-value meta-authors">---</span> <i class="fas fa-pen-nib"></i></li>
+                            <li><span>بطولة:</span> <span class="meta-value meta-stars">---</span> <i class="fas fa-users"></i></li>
+                        </ul>
+                        <div class="series-short-link-box">
+                            <button class="short-link-copy"><i class="fas fa-copy"></i> <span class="short-link-text">الرابط المختصر</span></button>
+                            <span class="short-link-value">https://web6.topcinema.com/?p=20303</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- أزرار المشاهدة والتحميل -->
+                <div class="series-sidebar-actions">
+                    <div class="sidebar-action watch-action">
+                        <i class="fas fa-clapperboard"></i>
+                        <span>مشاهدة الان</span>
+                        <div class="action-desc">الذهاب لصفحة المشاهدة</div>
+                    </div>
+                    <div class="sidebar-action download-action">
+                        <i class="fas fa-download"></i>
+                        <span>تحميل الان</span>
+                        <div class="action-desc">الذهاب لصفحة التحميل</div>
+                    </div>
+                    <div class="sidebar-action season-download-action">
+                        تحميل الموسم 2 كاملا برابط واحد
                     </div>
                 </div>
             </section>
 
-            <!-- قسم حلقات المسلسل -->
-            <section class="episodes-section">
-                <h2><i class="fas fa-list"></i> حلقات المسلسل</h2>
-                
+            <!-- الحلقات والمواسم -->
+            <section class="episodes-section custom-episodes-section">
+                <div class="episodes-header">
+                    <span class="episodes-count">[12] الحلقات</span>
+                    <span class="seasons-count">[2] المواسم</span>
+                    <span class="other-series-label">مسلسلات اخرى</span>
+                </div>
                 <!-- سيتم تعبئة المواسم والحلقات بواسطة JavaScript -->
-                <div id="episodes-container"></div>
+                <div class="episodes-grid custom-episodes-grid" id="episodes-container"></div>
             </section>
 
             <!-- مسلسلات مشابهة -->
